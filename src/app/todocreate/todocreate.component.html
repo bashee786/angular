@@ -1,0 +1,28 @@
+<h1>TODO</h1>
+<form [formGroup]="saveform" #saveTodo>
+  <div class="form-group">
+    <label for="name">Description</label>
+    <input type="text" class="form-control" formControlName="description" data-toggle="tooltip" data-placement="right"
+      title="Enter description">
+    <!-- <div class="alert alert-danger" *ngIf="(description.touched) && (description.invalid)" style="margin-top: 5px;">
+      <span *ngIf="description.errors.required">description is Required</span>
+      <span *ngIf="description.errors.minlength">
+        MinLength Error
+      </span>
+    </div> -->
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="name">Date</label>
+    <input type="text" class="form-control" formControlName="student_age" data-toggle="tooltip" data-placement="right"
+      title="Enter Student Email">
+    <div class="alert alert-danger" *ngIf="(StudentAge.touched) && (StudentAge.invalid)" style="margin-top: 5px;">
+      <span *ngIf="StudentAge.errors.required">Student Age is Required</span>
+      <span *ngIf="StudentEmail.errors.email">
+        Invalid Age Format
+      </span>
+    </div>
+  </div> -->
+
+  <button (click) = "saveTodo(saveTodo)" class="btn btn-success">Save</button>
+</form>
